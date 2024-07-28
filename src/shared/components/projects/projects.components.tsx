@@ -7,15 +7,58 @@ export const Projects = () => {
             Projects
         </h1>
 
-        <ul className="flex flex-col gap-3 items-center w-full">
+        <ul className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 lg:items-start gap-3 items-center w-full px-4">
+          <li className="md:col-span-2 lg:row-span-2 h-full">
+            <ProjCard 
+              title="E-commerce Val"
+              description="Um e-commerce para uma loja pequena de itens variados e roupas."
+              img="valmagazine.png"
+              stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
+              url="https://valmagazine.netlify.app/products"
+              repo="https://github.com/Sr-Van/e-commerce-val"
+              isPrimary={true}
+            />
+          </li>
+
           <li>
             <ProjCard 
-              title="Projeto 1"
-              description="Descrição do projeto 1"
-              img="https://avatars.githubusercontent.com/u/121509707?v=4"
-              stacks={["Angular", "Typescript", "Git", "TailwindCSS"]}
-              url=""
-              repo="https://github.com/Sr-Van"
+              title="E-commerce Val"
+              description="Um e-commerce para uma loja pequena de itens variados e roupas."
+              img="valmagazine.png"
+              stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
+              url="https://valmagazine.netlify.app/products"
+              repo="https://github.com/Sr-Van/e-commerce-val"
+            />
+          </li>
+
+          <li>
+            <ProjCard 
+              title="E-commerce Val"
+              description="Um e-commerce para uma loja pequena de itens variados e roupas."
+              img="valmagazine.png"
+              stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
+              url="https://valmagazine.netlify.app/products"
+              repo="https://github.com/Sr-Van/e-commerce-val"
+            />
+          </li>
+          <li>
+            <ProjCard 
+              title="E-commerce Val"
+              description="Um e-commerce para uma loja pequena de itens variados e roupas."
+              img="valmagazine.png"
+              stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
+              url="https://valmagazine.netlify.app/products"
+              repo="https://github.com/Sr-Van/e-commerce-val"
+            />
+          </li>
+          <li>
+            <ProjCard 
+              title="E-commerce Val"
+              description="Um e-commerce para uma loja pequena de itens variados e roupas."
+              img="valmagazine.png"
+              stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
+              url="https://valmagazine.netlify.app/products"
+              repo="https://github.com/Sr-Van/e-commerce-val"
             />
           </li>
         </ul>

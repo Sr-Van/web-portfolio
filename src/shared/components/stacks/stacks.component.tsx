@@ -1,4 +1,4 @@
-import './stacks.component.css';
+
 import Icon from '../icon';
 
 export const Stacks = () => {
