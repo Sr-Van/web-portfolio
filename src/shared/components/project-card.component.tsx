@@ -5,6 +5,7 @@ interface ProjCardProps {
   description?: string;
   stacks?: string[];
   img?: string;
+  howManyImgs: number;
   url?: string;
   repo?: string;
   isPrimary?: boolean | false;
@@ -14,7 +15,8 @@ export const ProjCard = (props: ProjCardProps) => {
   return (
     <article 
     className={`block rounded-md bg-purple-700 w-full h-full max-w-[350px] ${props.isPrimary? 'md:max-w-[1000px]' : ''} shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]`}>
-      <img className="rounded-t-md w-full md:w-[800px]" src={`/${props.img}`} alt={props.title} />
+      <img className={`${'card-' + props.img} rounded-t-md w-full ${props.isPrimary ? 'max-h-[200px] md:max-h-[800px] h-[500px]' : 'h-[200px]'} object-cover`} src={`/img/${props.img}.png`} alt={props.title} 
+      onMouseEnter={() => hoverOnImg(props)} />
 
       <div className="infos flex flex-col items-start p-3 h-full max-h-[350px]">
         <h1 className={`text-xl ${props.isPrimary ? 'munich' : ''}`}>{props.title}</h1>  
@@ -39,4 +41,13 @@ export const ProjCard = (props: ProjCardProps) => {
       </div>
     </article>
   );
+}
+
+const hoverOnImg = (props: ProjCardProps) => {
+  const { img, howManyImgs } = props;
+  const randomPick = Math.floor(Math.random() * howManyImgs);
+  let src = `/img/${img}${randomPick === 0 ? '' : randomPick}.png`;
+  console.log(src)
+
+  document.querySelector(`.card-${img}`)?.setAttribute('src', src)
 }
