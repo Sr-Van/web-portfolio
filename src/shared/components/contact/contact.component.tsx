@@ -1,4 +1,5 @@
 import { ContactInfos } from "../contact-infos.component";
+import { ContactForm } from "../contact-form.component";
 
 export const Contact = () => {
   return (
@@ -8,8 +9,9 @@ export const Contact = () => {
     >
       <h1 className="py-20 px-10 text-2xl text-white text-center">Contact</h1>
 
-      <div className="w-full flex flex-col justify-center md:grid md:grid-cols-2">
+      <div className="w-full flex flex-col gap-10 justify-center md:grid md:grid-cols-2">
         <ContactInfos />
+        <ContactForm />
       </div>
     </section>
   );
