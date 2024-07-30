@@ -1,4 +1,4 @@
-@media (width > 768px) {
+@media (width >= 768px) {
   .skill_card {
     transition: cubic-bezier(0, 1.99, 1, 0.6) 0.5s;
   }
@@ -9,6 +9,6 @@
   }
 
   .skillslist:has(.skill_card:hover) .skill_card:not(:hover) {
-    width: 50px !important;
+    opacity: 0.2 !important;
   }
 }
