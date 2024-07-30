@@ -15,7 +15,7 @@ export const ProjCard = (props: ProjCardProps) => {
   let wait = false;
   return (
     <article
-      className={`block rounded-md bg-gradient-to-tr from-purple-800 to-indigo-700 w-full h-full max-w-[350px] ${
+      className={`block rounded-md border-2 border-purple-500/60 bg-gradient-to-tr from-purple-500/50 to-indigo-700/50 w-full h-full max-w-[350px] ${
         props.isPrimary ? "md:max-w-[1000px]" : ""
       } shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]`}
     >
@@ -39,7 +39,11 @@ export const ProjCard = (props: ProjCardProps) => {
       />
 
       <div className="infos flex flex-col items-start p-3 h-full max-h-[250px]">
-        <h1 className={`text-xl ${props.isPrimary ? "munich" : ""}`}>
+        <h1
+          className={`text-xl text-purple-500 [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] ${
+            props.isPrimary ? "munich" : ""
+          }`}
+        >
           {props.title}
         </h1>
         <p className="text-slate-200 text-sm text-start">{props.description}</p>
