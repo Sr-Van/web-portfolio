@@ -13,6 +13,12 @@ export const Contact = () => {
         <ContactInfos />
         <ContactForm />
       </div>
+
+      <footer className="w-full mt-auto pb-2">
+        <p className="text-center text-xs text-purple-500 [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] w-full">
+          © 2024 - Created by Sr-van
+        </p>
+      </footer>
     </section>
   );
 };
