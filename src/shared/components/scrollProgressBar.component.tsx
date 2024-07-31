@@ -25,7 +25,7 @@ const ScrollProgressBar = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 z-20 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+      className="fixed top-0 left-0 z-[51] h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
       style={{ width: `${scrollProgress}%` }}
     />
   );

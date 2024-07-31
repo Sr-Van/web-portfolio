@@ -10,11 +10,11 @@ export default function Header() {
     <header
       data-aos="fade-down"
       data-aos-delay="1500"
-      className="lg:px-16 px-4 flex flex-wrap py-6 shadow-sm backdrop-blur-sm fixed top-1 left-0 right-0 z-50"
+      className="px-4 flex flex-wrap py-6 shadow-xl backdrop-blur-sm fixed top-0 left-0 right-0 z-50"
     >
       <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
         <svg
-          className="fill-current text-white"
+          className="fill-current text-purple-500"
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="30"
@@ -33,31 +33,62 @@ export default function Header() {
 
       <div
         className={`md:flex md:items-center md:w-auto transition-all w-full ${
-          open ? "block init-anim" : "hidden"
+          open
+            ? "flex flex-col justify-center items-center init-anim"
+            : "hidden h-0"
         }`}
         id="menu"
       >
         <nav>
           <ul className="md:flex items-center justify-between text-base text-white pt-4 md:pt-0">
             <li>
-              <a className="md:p-4 py-3 px-0 block text-xl" href="#home">
+              <a
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                href="#home"
+                onClick={() => {
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 350);
+                }}
+              >
                 Home
               </a>
             </li>
             <li>
-              <a className="md:p-4 py-3 px-0 block text-xl" href="#projects">
+              <a
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                href="#projects"
+                onClick={() => {
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 350);
+                }}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a className="md:p-4 py-3 px-0 block text-xl" href="#skills">
+              <a
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                href="#skills"
+                onClick={() => {
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 350);
+                }}
+              >
                 Skills
               </a>
             </li>
             <li>
               <a
-                className="md:p-4 py-3 px-0 block md:mb-0 mb-2 text-xl"
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all md:mb-0 mb-2 text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
                 href="#contact"
+                onClick={() => {
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 350);
+                }}
               >
                 Contact
               </a>
