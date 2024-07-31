@@ -32,8 +32,8 @@ export default function Header() {
       />
 
       <div
-        className={`md:flex md:items-center md:w-auto w-full ${
-          open ? "block h-100" : "hidden h-0"
+        className={`md:flex md:items-center md:w-auto transition-all w-full ${
+          open ? "block init-anim" : "hidden"
         }`}
         id="menu"
       >
