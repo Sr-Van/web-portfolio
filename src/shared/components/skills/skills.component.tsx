@@ -3,7 +3,7 @@ import { SkillsList } from "../skillslist.component";
 export const Skills = () => {
   return (
     <section
-      className="min-h-screen flex flex-col items-start w-full overflow-hidden bg-slate-950"
+      className="min-h-screen flex flex-col items-start w-full overflow-hidden bg-slate-950 pb-10"
       id="skills"
     >
       <h1
