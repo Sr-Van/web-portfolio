@@ -1,6 +1,9 @@
+import React, { useState } from "react";
 import { ProjCard } from "../project-card.component";
 
 export const Projects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section
       className="min-h-screen relative flex flex-col items-start w-full bg-slate-950 z-20"
@@ -135,9 +138,31 @@ export const Projects = () => {
           <div
             className="w-20 h-20 rounded-full shadow bg-gradient-to-r from-slate-800 via-blue-500 to-indigo-900 animate-pulse cursor-pointer hover:animate-none bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all"
             title="click me :)"
+            onClick={() => {
+              setIsModalOpen(!isModalOpen);
+            }}
           ></div>
         </div>
       </div>
+
+      <dialog
+        open={isModalOpen}
+        className={`${
+          isModalOpen ? "block" : "hidden"
+        } h-screen w-screen fixed top-0 left-0 bg-slate-950/20 backdrop-blur-sm flex items-center justify-center z-[1000]`}
+        onClick={(e: React.MouseEvent) => {
+          e.preventDefault();
+          const tgt = e.target as HTMLDialogElement;
+
+          if (tgt.tagName === "DIALOG") {
+            setIsModalOpen(!isModalOpen);
+          }
+        }}
+      >
+        <div className="w-2/3 h-1/3 bg-gradient-to-tr from-purple-500 to-indigo-700 rounded-md shadow-md">
+          <h1>tome modal</h1>
+        </div>
+      </dialog>
     </section>
   );
 };
