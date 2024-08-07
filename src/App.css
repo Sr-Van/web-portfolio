@@ -11,6 +11,52 @@
   .skillslist:has(.skill_card:hover) .skill_card:not(:hover) {
     opacity: 0.2 !important;
   }
+
+  .parallax_html {
+    animation: parallax linear;
+    animation-timeline: scroll();
+
+    z-index: 10;
+    --parallax-speed: 10;
+    --parallax-dir: -200px;
+  }
+
+  .parallax_html .parallax_html_block {
+    animation: parallax linear;
+    animation-timeline: scroll();
+    --parallax-dir: -200px;
+  }
+  .parallax_html .parallax_html_block:nth-child(1) {
+    --parallax-speed: 5;
+  }
+  .parallax_html .parallax_html_block:nth-child(3) {
+    --parallax-speed: 9;
+  }
+  .parallax_html .parallax_html_block:nth-child(6) {
+    --parallax-speed: 2;
+  }
+  .parallax_html .parallax_html_block:nth-child(8) {
+    --parallax-speed: 12;
+  }
+  .parallax_html .parallax_html_block:nth-child(2) {
+    --parallax-speed: 10;
+  }
+  .parallax_html .parallax_html_block:nth-child(4) {
+    --parallax-speed: 5;
+  }
+
+  .parallax_css {
+    animation: parallax linear;
+    animation-timeline: scroll();
+    --parallax-speed: 5;
+    --parallax-dir: 200px;
+  }
+
+  @keyframes parallax {
+    to {
+      transform: translateY(calc(var(--parallax-speed) * var(--parallax-dir)));
+    }
+  }
 }
 @media (width < 768px) {
   .init-anim {
