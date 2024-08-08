@@ -4,7 +4,7 @@ import { ContactForm } from "../contact-form.component";
 export const Contact = () => {
   return (
     <section
-      className="h-screen flex flex-col items-start min-h-[100dvh] bg-gradient-to-br from-indigo-950 to-purple-900"
+      className="flex flex-col items-start min-h-[100dvh] bg-gradient-to-br from-indigo-950 to-purple-900"
       id="contact"
     >
       <h1 className="py-20 px-10 main_titles" data-aos="fade-right">
