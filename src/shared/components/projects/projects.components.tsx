@@ -9,7 +9,12 @@ export const Projects = () => {
       className="min-h-screen relative flex flex-col items-start w-full bg-slate-950 z-20"
       id="projects"
     >
-      <h1 className="py-20 px-10 text-2xl text-white text-center">Projects</h1>
+      <h1
+        className="py-20 px-10 text-white text-center main_titles"
+        data-aos="fade-right"
+      >
+        Projects
+      </h1>
 
       <div className="wrapper flex justify-center w-full">
         <ul className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-4 lg:items-start gap-3 items-center w-full md:w-[600px] lg:w-[950px] xl:w-[1000px] px-4">
@@ -159,8 +164,27 @@ export const Projects = () => {
           }
         }}
       >
-        <div className="w-2/3 h-1/3 bg-gradient-to-tr from-purple-500 to-indigo-700 rounded-md shadow-md">
-          <h1>tome modal</h1>
+        <div className="w-2/3 bg-gradient-to-tr from-slate-800 to-indigo-900 p-4 text-white rounded-md shadow-md flex flex-col gap-4">
+          <h1 className="main_titles non_styled">What is this?</h1>
+          <p>They are elements that represent the WEB.</p>
+
+          <div>
+            <div className="w-8 bg-gradient-to-r from-indigo-500 to-purple-500 h-5 border-4 border-purple-500"></div>
+            <p>First we have the block, the structure, the HTML.</p>
+          </div>
+
+          <div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-bl from-indigo-500 to-purple-500 shadow"></div>
+            <p>
+              Second we have the styles, the reason you like the site event you
+              dont want to be there, the CSS.
+            </p>
+          </div>
+
+          <p>
+            The last one, that one you clicked represents JS, the dynamism, the
+            reactivism.
+          </p>
         </div>
       </dialog>
     </section>
