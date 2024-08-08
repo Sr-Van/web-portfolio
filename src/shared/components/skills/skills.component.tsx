@@ -10,9 +10,34 @@ export const Skills = () => {
         Skills
       </h1>
 
+      <span
+        data-aos="zoom-in"
+        data-aos-duration="200"
+        data-aos-delay="500"
+        className="text-slate-400 flex items-center justify-center w-full p-3"
+      >
+        <p className="max-w-[780px]">
+          Main functions: Create modern and fast web applications from the
+          back-end, modeling the API & consuming in Front-end with a good
+          workflow. Pragmatic and creative, I'm able to work with pure JS, HTML
+          and CSS at the same level as working with a framework or library.
+        </p>
+      </span>
       <div className="wrapper min-h-[350px] mx-auto" data-aos="fade-left">
         <SkillsList />
       </div>
+
+      <span
+        data-aos="zoom-in"
+        data-aos-duration="200"
+        data-aos-delay="500"
+        className="text-slate-400 flex items-center justify-center w-full p-3"
+      >
+        <p className="max-w-[780px]">
+          Others skills: Angular material, RxJS, MongoDB, Express, Nodemailer,
+          BootStrap, Git, GitHub, lodash, AOS.
+        </p>
+      </span>
 
       <div
         data-aos="fade-up"
