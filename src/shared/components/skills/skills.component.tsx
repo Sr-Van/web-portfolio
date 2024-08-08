@@ -6,10 +6,7 @@ export const Skills = () => {
       className="min-h-screen flex flex-col items-start w-full overflow-hidden bg-slate-950 pb-10"
       id="skills"
     >
-      <h1
-        className="text-2xl text-white text-center py-20 px-10"
-        data-aos="fade-left"
-      >
+      <h1 className="main_titles py-20 px-10" data-aos="fade-left">
         Skills
       </h1>
 
