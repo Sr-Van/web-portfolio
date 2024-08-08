@@ -15,7 +15,7 @@ export const ProjCard = (props: ProjCardProps) => {
   let wait = false;
   return (
     <article
-      className={`block rounded-md border-2 border-purple-500/60 bg-gradient-to-tr from-purple-500/50 to-indigo-700/50 w-full h-full ${
+      className={`block rounded-md border-2 border-purple-500/60 bg-gradient-to-tr from-purple-500/50 to-indigo-700/50 w-[340px] sm:w-[450px] md:w-full h-full ${
         props.isPrimary ? "md:max-w-[1000px]" : ""
       } shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]`}
     >
