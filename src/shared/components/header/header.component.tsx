@@ -43,7 +43,7 @@ export default function Header() {
           <ul className="md:flex items-center justify-between text-base text-white pt-4 md:pt-0">
             <li>
               <a
-                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest font-bold"
                 href="#home"
                 onClick={() => {
                   setTimeout(() => {
@@ -56,7 +56,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest font-bold"
                 href="#projects"
                 onClick={() => {
                   setTimeout(() => {
@@ -69,7 +69,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest font-bold"
                 href="#skills"
                 onClick={() => {
                   setTimeout(() => {
@@ -82,7 +82,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all md:mb-0 mb-2 text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest"
+                className="md:p-4 py-3 px-0 block md:text-sm hover:text-purple-500 border-b-2 border-b-transparent hover:border-b-purple-700 text-center transition-all md:mb-0 mb-2 text-xl text-white [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] tracking-widest font-bold"
                 href="#contact"
                 onClick={() => {
                   setTimeout(() => {

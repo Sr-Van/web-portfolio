@@ -6,15 +6,15 @@ export default function Home() {
       className="home relative flex flex-col gap-2 items-center justify-center h-screen"
       id="home"
     >
-      <div className="w-full flex flex-col md:flex-row md:relative md:w-6/12 lg:w-4/12 xl:w-3/12">
+      <div className="w-full flex flex-col md:flex-row md:relative md:w-6/12 lg:w-5/12 xl:w-4/12">
         <div className="w-2/3 md:flex md:justify-center md:items-center">
           <h1
-            className="text-2xl text-white text-center flex flex-col items-end"
+            className="text-2xl lg:text-3xl text-white text-center flex flex-col items-end"
             data-aos="fade-right"
             data-aos-duration="800"
           >
             Hi, I'm
-            <span className="text-4xl munich font-bold text-purple-600">
+            <span className="text-4xl lg:text-5xl munich font-bold text-purple-600">
               Vanderson
             </span>
             <small className="text-xs text-slate-400">Web Developer</small>
