@@ -1,11 +1,55 @@
-import { useState } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const documentRef = useRef(document);
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+      }
+    },
+    [open]
+  );
+
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (!open) return;
+
+      const el = event.target as HTMLElement;
+
+      if (el.id === "menu-toggle" || el.id === "menu" || el.tagName === "LABEL")
+        return;
+
+      if (el.tagName !== "HEADER" && open) {
+        setOpen(false);
+      }
+    },
+    [open]
+  );
+
   const toggleMenu = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    documentRef.current.addEventListener("keydown", handleKeyDown);
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      documentRef.current.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  useEffect(() => {
+    documentRef.current.addEventListener("click", handleClickOutside);
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      documentRef.current.removeEventListener("click", handleClickOutside);
+    };
+  }, [handleClickOutside]);
+
   return (
     <header
       data-aos="fade-down"
@@ -14,7 +58,7 @@ export default function Header() {
     >
       <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
         <svg
-          className="fill-current text-purple-500"
+          className="fill-current text-purple-500 pointer-events-none"
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="30"
