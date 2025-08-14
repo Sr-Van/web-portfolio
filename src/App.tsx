@@ -29,7 +29,7 @@ function App() {
 
   if (!isStarted) {
     return (
-      <div className="App absolute h-full w-full flex flex-col items-center justify-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+      <div className="App absolute min-h-dvh h-full w-full flex flex-col items-center justify-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
         <h1 className="title_holder" data-aos="fade-down" data-os-delay="1000">
           Vanderson
         </h1>

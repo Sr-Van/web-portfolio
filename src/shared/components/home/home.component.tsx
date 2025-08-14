@@ -3,7 +3,7 @@ import { Stacks } from "../stacks/stacks.component";
 export default function Home() {
   return (
     <section
-      className="home relative flex flex-col gap-2 items-center justify-center h-screen"
+      className="home relative flex flex-col gap-2 items-center justify-center min-h-lvh"
       id="home"
     >
       <div className="w-full flex flex-col md:flex-row md:relative md:w-6/12 lg:w-5/12 xl:w-4/12">
