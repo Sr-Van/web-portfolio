@@ -28,8 +28,8 @@ export const Projects = () => {
               howManyImgs={7}
               description="Um e-commerce para uma loja pequena de itens variados e roupas."
               img="otp2p"
+              url=""
               stacks={["Angular", "Typescript", "Git", "Bootstrap"]}
-              url="https://otp2p.shop"
               repo="https://github.com/Sr-Van/otp2p-frontend"
               isPrimary={true}
             />

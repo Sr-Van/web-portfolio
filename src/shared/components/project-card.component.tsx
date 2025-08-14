@@ -6,13 +6,17 @@ interface ProjCardProps {
   stacks?: string[];
   img?: string;
   howManyImgs: number;
-  url?: string;
+  url: string;
   repo?: string;
   isPrimary?: boolean | false;
 }
 
 export const ProjCard = (props: ProjCardProps) => {
   let wait = false;
+
+  const handleOpenLink = (url: string) => {
+    window.open(url, "_blank");
+  };
   return (
     <article
       className={`block rounded-md border-2 border-purple-500/60 bg-gradient-to-tr from-purple-500/50 to-indigo-700/50 w-[340px] sm:w-[450px] md:w-full h-full ${
@@ -59,18 +63,20 @@ export const ProjCard = (props: ProjCardProps) => {
           className={`flex justify-between items-center w-full mt-3
           }`}
         >
-          <a
+          <button
             rel="noreferrer"
-            target="_blank"
             className={`text-xs text-slate-200 p-3 shadow rounded-lg ${
               props.isPrimary
                 ? "md:border-b-4 md:border-slate-800 md:hover:bg-slate-800 md:bg-transparent"
                 : ""
             } bg-slate-800 hover:bg-slate-700 transition-all`}
-            href={props.url}
+            onClick={
+              props.url === "" ? () => handleOpenLink(props.url) : undefined
+            }
+            disabled={!props.url}
           >
             View Project
-          </a>
+          </button>
           <a
             rel="noreferrer"
             target="_blank"
