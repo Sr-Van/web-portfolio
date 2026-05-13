@@ -1,4 +1,5 @@
 import { Stacks } from "../stacks/stacks.component";
+import Alert from "../alert.component";
 
 export default function Home() {
   return (
@@ -86,6 +87,7 @@ export default function Home() {
           ></div>
         </div>
       </div>
+      <Alert />
     </section>
   );
 }
