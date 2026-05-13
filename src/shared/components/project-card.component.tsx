@@ -70,9 +70,7 @@ export const ProjCard = (props: ProjCardProps) => {
                 ? "md:border-b-4 md:border-slate-800 md:hover:bg-slate-800 md:bg-transparent"
                 : ""
             } bg-slate-800 hover:bg-slate-700 transition-all`}
-            onClick={
-              props.url === "" ? () => handleOpenLink(props.url) : undefined
-            }
+            onClick={() => handleOpenLink(props.url)}
             disabled={!props.url}
           >
             View Project
