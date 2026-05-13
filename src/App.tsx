@@ -26,8 +26,25 @@ function App() {
   }, []);
 
   const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Enter") {
-      handleStartTransition();
+    switch (event.key) {
+      case "Enter":
+        handleStartTransition();
+        break;
+      case "h":
+        window.location.assign("#home");
+        break;
+      case "p":
+        window.location.assign("#projects");
+        break;
+      case "s":
+        window.location.assign("#skills");
+        break;
+      case "c":
+        window.location.assign("#contact");
+        break;
+
+      default:
+        break;
     }
   };
 
