@@ -18,6 +18,19 @@ function App() {
   const [isStarted, setIsStarted] = React.useState(false);
   const [startTransition, setStartTransition] = React.useState(false);
 
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Enter") {
+      handleStartTransition();
+    }
+  };
+
   const handleStartTransition = () => {
     console.log("start transition");
     setStartTransition(true);
@@ -40,7 +53,11 @@ function App() {
         >
           Web Developer
         </h4>
-        <div data-aos="zoom-in" data-aos-delay="1700">
+        <div
+          className="flex flex-col items-center justify-center"
+          data-aos="zoom-in"
+          data-aos-delay="1700"
+        >
           <button
             className="border-2 border-purple-500 hover:border-transparent hover:bg-indigo-700 text-purple-500 hover:text-white rounded-full shadow p-2 flex items-center justify-evenly mt-5 transition-all duration-500 w-32 hover:w-44"
             onClick={handleStartTransition}
@@ -48,6 +65,10 @@ function App() {
             <span className="text-sm">Get started</span>
             <span className="text-2xl">🚀</span>
           </button>
+
+          <small className="text-xs text-slate-400 animate-pulse mt-5">
+            Press ENTER to continue.
+          </small>
         </div>
         <div
           className={`transitioner bg-indigo-700 ${
